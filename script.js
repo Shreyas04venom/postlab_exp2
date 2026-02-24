@@ -1,4 +1,3 @@
-// JSON object containing products
 const productsData = {
     products: [
         { id: 1, name: "Laptop", price: 55000, category: "Electronics" },
@@ -9,7 +8,6 @@ const productsData = {
     ]
 };
 
-// Display all product details
 function displayProducts(products) {
     console.log("\nProduct List:- ");
     products.forEach(product => {
@@ -20,15 +18,12 @@ function displayProducts(products) {
     });
 }
 
-// Filter products by minimum price
 function filterByMinPrice(products, minPrice) {
     return products.filter(product => product.price >= minPrice);
 }
 
-// MAIN EXECUTION
 displayProducts(productsData.products);
 
-// Simulated user input (for lab/demo)
 const userMinPrice = 2000;
 
 const filteredProducts = filterByMinPrice(productsData.products, userMinPrice);
@@ -40,7 +35,6 @@ displayProducts(filteredProducts);
 
 
 
-// Simulated async fetch for products
 function fetchProducts() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -52,7 +46,6 @@ function fetchProducts() {
     });
 }
 
-// Simulated async fetch for reviews
 function fetchReviews() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -64,7 +57,6 @@ function fetchReviews() {
     });
 }
 
-// Using Async/Await with Parallel Execution
 async function loadEcommerceData() {
     try {
         console.log("Fetching data...\n");
